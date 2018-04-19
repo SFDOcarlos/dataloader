@@ -1,6 +1,6 @@
 1. For mac to run and debug command line:
 
-1. Extract to csv
+1.1 Extract to csv
 cd installed execuatable folder: 
 cd ~/workspace/dataloader/src/main/nsis/samples
 
@@ -14,13 +14,13 @@ Csv Extraction for Mac that utilize macConf/process-conf.xml.
 
  ~/workspace/dataloader/src/main/nsis/samples>  java -cp ../../../../target/dataloader-42.1.0-uber.jar -Dsalesforce.config.dir=macConf com.salesforce.dataloader.process.ProcessRunner process.name=csvAccountExtractProcessMac
 
-2. Db connection
+1.2. Db connection
 	Db for mac: 
 	 java -cp ../../../../target/dataloader-42.1.0-uber.jar:ojdbc6.jar -Dsalesforce.config.dir=macConf com.salesforce.dataloader.process.ProcessRunner process.name=activity_event_extract_to_oracle
 
 
 
- 2. Debug: this is running dataloader UI. 
+1.3. Debug: this is running dataloader UI. 
  ~/workspace/dataloader/src/main/nsis/samples> java -XstartOnFirstThread -jar -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005  ../../../../target/dataloader-42.1.0-uber.jar -Dsalesforce.config.dir=macConf   com.salesforce.dataloader.process.ProcessRunner process.name=csvAccountExtractProcess
 
  Intellij: using remote debug at port 5005
@@ -29,3 +29,6 @@ Csv Extraction for Mac that utilize macConf/process-conf.xml.
 
   -Dsalesforce.config.dir=/Users/xbian/workspace/dataloader/src/main/nsis/samples/conf
 
+2. Windows environment run
+
+C:\Users\IEUser\AppData\Local\salesforce.com\Data Loader\bin>process.bat C:\Users\IEUser\dataloaderrelease\src\main\nsis\samples\macConf csvAccountExtractProcessWin
