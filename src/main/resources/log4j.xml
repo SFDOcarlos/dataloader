@@ -19,17 +19,17 @@
     </appender>
     
     <category name="org.apache.log4j.xml">
-        <priority value="warn" />
+        <priority value="debug" />
         <appender-ref ref="fileAppender" />
         <appender-ref ref="STDOUT" />
     </category>
     
     <logger name="org.apache" >
-            <level value ="warn" />
+            <level value ="debug" />
     </logger>
     
     <root>
-        <priority value ="info" />
+        <priority value ="debug" />
         <appender-ref ref="fileAppender" />
         <appender-ref ref="STDOUT" />
     </root>

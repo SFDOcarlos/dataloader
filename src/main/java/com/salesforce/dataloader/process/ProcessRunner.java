@@ -255,6 +255,11 @@ public class ProcessRunner implements InitializingBean, Job, Runnable {
     public static void main(String[] args) {
         ProcessRunner runner = null;
         try {
+            Integer argi = 0;
+            System.console().printf(" ***************************\n");
+            for(String arg : args)
+                System.console().printf(" args[" + argi + "]=" + arg + "\n");
+            System.console().printf(" ***************************\n");
             // create the process
             runner = ProcessRunner.getInstance(args);
             if (runner == null) topLevelError("Process runner is null", new NullPointerException());
